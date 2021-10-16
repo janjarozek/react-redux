@@ -1,0 +1,17 @@
+.divContainer {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 0.4em;
+    text-align: left;
+    h3 {
+        margin: 0;
+    }
+    ul {
+        padding: 0px;
+    }
+    li {
+        list-style-type: none;
+        padding: 3px;
+    }
+}
