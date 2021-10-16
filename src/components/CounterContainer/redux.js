@@ -15,7 +15,7 @@ const INITIAL_STATE = {
     counter: 0
 };
 
-export default function reducer(state = INITIAL_STATE, action) {
+export default function counterReducer(state = INITIAL_STATE, action) {
     switch (action.type) {
         case COUNTER_INCREMENT:
             // return Object.assign({}, {counter: state.counter+1});

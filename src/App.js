@@ -1,19 +1,15 @@
-import { createStore } from 'redux';
-// import reducer, { increment, decrement, reset } from './components/CounterContainer/redux';
-import reducer from './components/CounterContainer/redux';
-import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import rootReducer from './rootReducer'
+import { Provider } from 'react-redux'
 
-import './_sass/styles.scss';
-import CounterContainer from './components/CounterContainer';
-import Posts from './components/posts/containers/Posts';
-import Users from './components/users/containers/Users';
+import './_sass/styles.scss'
+import CounterContainer from './components/CounterContainer'
+import Posts from './components/posts/containers/Posts'
+import Users from './components/users/containers/Users'
 
-const store = createStore(reducer);
-// store.subscribe(() => console.log(store.getState()));
-
-// store.dispatch(increment());
-// store.dispatch(reset());
-// store.dispatch(decrement());
+const store = createStore(rootReducer, applyMiddleware(thunk));
+store.subscribe(()=> console.log(store.getState()));
 
 function App() {
   return (
