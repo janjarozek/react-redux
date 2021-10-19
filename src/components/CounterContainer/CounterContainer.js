@@ -24,7 +24,7 @@ function mapStateToProps(state){
 }
 
 function mapDispatchToProps(dispatch){
-    return{
+    return {
         storeCounterIncrement: () => dispatch(increment()),
         storeCounterDecrement: () => dispatch(decrement()),
         storeCounterReset: () => dispatch(reset())
