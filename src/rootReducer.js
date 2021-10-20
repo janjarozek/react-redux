@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form'
 
 import counterReducer from './components/CounterContainer/redux'
 import postsReducer from './components/posts/redux'
@@ -9,7 +10,8 @@ const rootReducers = combineReducers({
     storeNotifications: uiReducer,
     storeCounter: counterReducer,
     storePosts: postsReducer,
-    storeUsers: usersReducer
+    storeUsers: usersReducer,
+    form: formReducer
 })
 
 export default rootReducers;
